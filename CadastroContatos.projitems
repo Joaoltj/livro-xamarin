@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{A4A472EE-61A1-4A4E-B03A-1317498A7FE2}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CadastroContatos</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\EntregadorDAL.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\Entregador.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\GarconsListaPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\GarconsNewPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\GarconsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\MenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\MenuPageXAML.xaml.cs">
+      <DependentUpon>MenuPageXAML.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\MenuPageXAML.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Dal\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+  </ItemGroup>
+</Project>
